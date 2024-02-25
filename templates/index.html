@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+<title>Health Sender</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #2d5296;  
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+/*.fakeimg {
+background-color: #aaa; 
+width:100%;.l
+padding: 20px;.l
+.l
+};l;...;/;///;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;..;/.l
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #b6b6b6;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+</style>
+<!-- <py-script> name = input("Name: ")</py-script>  -->
+</head>
+<body>
+<div class="header">
+  <h1>Health Bridge</h1>
+  <p>Connecting information straight to your doctor with the click of a button</p>
+</div>
+  <div class="main">
+    <h5></h5>
+    <!-- <div class="fakeimg" style="height:200px;">Image</div> --> 
+    <br>
+    
+    <form action="/my-handling-form-page" method="get">
+      <ul>
+        <li>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" />
+            <!-- JavaScript to store the input -->
+
+        </li>
+        <label for="gender">Gender:</label>
+        <input type="gender" id="gender" name="user_gender" />
+       
+        <li>
+          <label for="height">Height, in inches:</label>
+        <input type="height" id="height" name="user_height" />
+        </li>
+       
+      </li>
+      <label for="weight">Weight, in pounds:</label>
+      <input type="weight" id="weight" name="user_weight" />
+      </li>
+
+
+        <li>
+          <label for="medication">Current medications taken (if none are taken type n/a) </label>
+          <input type="text" id="medication" name="user_medication" />
+      </li>
+      
+      <li>
+        <label for="allergies">Allergies (if there are none, type n/a)</label>
+        <input type="text" id="allergies" name="user_allergies" />
+      </li>
+      <li>
+      <label for="hospital"> Recent hospital visits (if you haven't had any recently, type n/a)</label>
+      <input type="text" id="hospital" name="user_hospital" />
+    <li>
+        <li>
+          <label for="msg">Additional Comments:</label>
+          <textarea id="msg" name="user_message"></textarea>
+        </li>
+      </ul>
+       <button type="submit" style="margin-top: 20px;">Submit Health Info</button>
+    </form>
+        
+</div>
+
+<div class="footer">
+  <h2>Questions?</h2>
+  <h2>Send us an email at HealthSender@yahoo.com</h2>
+</div>
+<script> src="answers.json" </script>
+</body>
+</html>
